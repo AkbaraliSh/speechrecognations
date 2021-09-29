@@ -12,7 +12,7 @@ rec.onerror = function () {
 
 rec.onresult = function (evt) {
 	var command = evt.results[0][0].transcript;
-	if (command === 'ko\'k') {
+	if (command === 'ko\'p') {
 		window.document.body.style.backgroundColor = 'blue';
 	}
 	else if (command === 'yashil') {

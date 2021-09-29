@@ -12,15 +12,19 @@ rec.onerror = function () {
 
 rec.onresult = function (evt) {
 	var command = evt.results[0][0].transcript;
-
-	if (command === '1') {
+	if (command === '0') {
+		window.document.body.style.backgroundColor = 'blue';
+	}
+	else if (command === '1') {
 		window.document.body.style.backgroundColor = 'green';
 	} else if (command === '2') {
 		window.document.body.style.backgroundColor = 'red';
 	}
+	console.log(command);
 };
 
 recBtn.addEventListener('click', function () {
 	console.log('==== Aloqa boshlandi ====');
 	rec.start();
 });
+
